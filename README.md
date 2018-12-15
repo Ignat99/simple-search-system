@@ -63,6 +63,13 @@ curl -X POST \
 }'
 ```
 
+## Elasticsearch
+'''
+docker pull elasticsearch
+docker run -p 9200:9200 -d -v "$PWD/plugin_dir":/usr/share/elasticsearch/plugins \
+    -v "$PWD/config/elasticsearch.yml":/usr/share/elasticsearch/config/elasticsearch.yml \
+    elasticsearch
+'''
 
 ## Thanks to
 https://docs.jboss.org/hibernate/search/5.6/reference/en-US/html_single/#__anchor_xml_id_elasticsearch_integration_server_configuration_xreflabel_elasticsearch_integration_server_configuration_elasticsearch_configuration
