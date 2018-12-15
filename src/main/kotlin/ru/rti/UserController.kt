@@ -14,6 +14,12 @@ internal class UserController(private val userService: UserService) {
         return userService.findAll()
     }
 
+    @GetMapping("/generator")
+    fun getGen(): List<User> {
+        userService.main1()
+        return userService.findAll()
+    }
+
     @GetMapping("/users/search")
     fun search(text: String): List<User> {
         return userService.search(text)

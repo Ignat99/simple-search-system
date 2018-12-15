@@ -4,8 +4,14 @@ import org.springframework.web.client.RestTemplate
 import java.net.URI
 import java.util.*
 import kotlin.collections.ArrayList
+import org.springframework.stereotype.Repository
+import javax.transaction.Transactional
 
-fun main(args: Array<String>) {
+@Repository
+@Transactional
+internal class UserGenerator() {
+
+internal fun main1() {
     val url = URI("http://localhost:8088/users")
     for (i in 1..100L) {
         postUser(url, i)
@@ -173,3 +179,5 @@ val surnames = listOf(
         "Щербаков",
         "Блинов",
         "Колесников")
+
+}

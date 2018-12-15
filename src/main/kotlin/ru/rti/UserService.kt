@@ -5,10 +5,14 @@ import javax.transaction.Transactional
 
 @Service
 @Transactional
-internal class UserService(private val userRepository: UserRepository, private val userSearch: UserSearch) {
+internal class UserService(private val userRepository: UserRepository, private val userSearch: UserSearch, private val userGenerator: UserGenerator) {
 
     fun findAll(): List<User> {
         return userRepository.findAll()
+    }
+
+    fun main1() {
+        return userGenerator.main1()
     }
 
     fun search(text: String): List<User> {
