@@ -65,6 +65,8 @@ curl -X POST \
 
 
 ## Thanks to
+https://docs.jboss.org/hibernate/search/5.6/reference/en-US/html_single/#__anchor_xml_id_elasticsearch_integration_server_configuration_xreflabel_elasticsearch_integration_server_configuration_elasticsearch_configuration
+
 https://blog.codecentric.de/en/2017/06/kotlin-spring-working-jpa-data-classes/
 
 https://kotlinlang.org/docs/tutorials/spring-boot-restful.html
